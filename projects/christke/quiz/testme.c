@@ -11,7 +11,7 @@
 // inputString parameters
 #define STRLEN    6
 #define SSPAN1    26
-#define SSPAN2    3
+#define SSPAN2    2
 #define SOFFSET1  97
 #define SOFFSET2  0
 
@@ -32,13 +32,10 @@ char *inputString()
 
 void testme()
 {
-  time_t startTime,endTime;
   int tcCount = 0;
   char *s;
   char c;
   int state = 0;
-
-  time(&startTime);
 
   while (1)
   {
@@ -62,8 +59,6 @@ void testme()
        && state == 9)
     {
       printf("error ");
-      time(&endTime);
-      printf("Elapsed Time = %ld seconds",(endTime-startTime));
       exit(200);
     }
   }
