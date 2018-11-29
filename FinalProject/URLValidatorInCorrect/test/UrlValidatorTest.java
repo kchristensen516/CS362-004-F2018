@@ -19,6 +19,9 @@ public class UrlValidatorTest extends TestCase {
 		assertFalse(urlVal.isValid("http://www.google.com../"));
 		assertTrue(urlVal.isValid("http://209.191.122.70/"));
 		assertFalse(urlVal.isValid("http://256.191.122.70/"));
+		assertTrue(urlVal.isValid("ftp://foo.bar"));
+		assertFalse(urlVal.isValid("ftp://foo.bar../"));
+		assertFalse(urlVal.isValid("ftp:/foo.bar../"));
 //		assertTrue(urlVal.isValid("https://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid"));
 	}
 
