@@ -22,7 +22,7 @@ public class UrlValidatorTest extends TestCase {
 		assertTrue(urlVal.isValid("ftp://foo.bar"));
 		assertFalse(urlVal.isValid("ftp://foo.bar../"));
 		assertFalse(urlVal.isValid("ftp:/foo.bar../"));
-//		assertTrue(urlVal.isValid("https://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid"));
+		assertTrue(urlVal.isValid("https://stackoverflow.com/questions/1547899/which-characters-make-a-url-invalid"));
 	}
 
 	public void testYourFirstPartition() {
